@@ -5,4 +5,4 @@ Esteganografia BPCS
 
 Ocultamento de imagens em imagens pelo método BPCS (Bit-Plane Complexity Segmentation)
 
-  O objetivo desse projeto é implementar intuitivamente o método BPCS de esteganografia, que nesse caso servirá para ocultar uma imagem em outra. O método consiste em ocultar pixels da imagem alvo em blocos de um plano de bit cujos bits em si possuem comportamento ruidoso, ele se aproveita na característica da visão humana de se concentrar no reconhecimento de padrões e formas.
+  O objetivo desse projeto é implementar intuitivamente o método BPCS de esteganografia, que nesse caso servirá para ocultar uma imagem em outra e a recuperar. O método consiste em ocultar pixels da imagem alvo em blocos de um plano de bit cujos bits em si possuem comportamento ruidoso, ele se aproveita na característica da visão humana de se concentrar no reconhecimento de padrões e formas.
