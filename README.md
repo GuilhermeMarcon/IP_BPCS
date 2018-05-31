@@ -1,6 +1,4 @@
 # PDI_BPCS
-Projeto final de Processamento de Imagens: esteganografia BPCS
-
 Guilherme dos Santos Marcon NUSP 9293564
 
 Esteganografia BPCS
