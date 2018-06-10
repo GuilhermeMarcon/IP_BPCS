@@ -10,3 +10,6 @@ Ocultamento de imagens em imagens pelo método BPCS (Bit-Plane Complexity Segmen
 Todas as imagens utilizadas estão no diretório "imagens" e elas foram ou retiradas do site https://www.pexels.com/public-domain-images/ ou modificadas a partir das imagens retiradas do mesmo site. Os links de cada imagem individual estão salvas no arquivo ImagensLinks.txt.
 
 Os principais métodos utilizados são: ler, salvar e manipular as imagens utilizando as bibliotecas imageio e numpy do python; transformar a imagem de Pure Binary Code para Canonical Gray Code e vice-versa; checar se um bloco de um plano de bit é considerado complexo.
+
+# Link relatório
+https://docs.google.com/document/d/1uMY9GYyW0NyyQ5f_QNhX3i__NSky9qtzVaD-fMotZlY/edit?usp=sharing
