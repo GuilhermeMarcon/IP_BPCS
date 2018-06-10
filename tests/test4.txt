@@ -1,0 +1,4 @@
+1
+imagens/reduced-lion.png
+imagens/mini-lion.png
+results/test4.png
