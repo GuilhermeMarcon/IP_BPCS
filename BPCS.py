@@ -20,6 +20,8 @@ maxChanges = 2*4 + 3*(8-2)*4 + np.power(8-2, 2)*4
 ##                  + max changes in the middle
 
 ## using classes to make the code more understandable
+## VesselIterator is a class to iterate through the vessel image
+## It contais methods like: nextComplexPlane(), getPlane() and insertPlane(plane)
 class VesselIterator:
     def __init__(self, vesselImage):
         self.__vessel = vesselImage
@@ -32,6 +34,7 @@ class VesselIterator:
         if not isComplex(self.getPlane()):
             self.nextComplexPlane()
 
+    ## Iterate to the next vessel plane
     def nextPlane(self):
         self.__x += 8
         if self.__x+8 > self.__vessel.shape[0]:
@@ -46,18 +49,22 @@ class VesselIterator:
                     if self.__B >= 8:
                         self.__B = 0
                         self.finished = True
-    
+
+    ## Iterate through vessel image to find the next complex plane
     def nextComplexPlane(self):
         while not self.finished:
             self.nextPlane()
             if isComplex(self.getPlane()): break
 
+    ## Returns the 8x8 current vessel block
     def getBlock(self):
         return self.__vessel[self.__x:self.__x+8, self.__y:self.__y+8, self.__z]
 
+    ## Returns the 8x8 current vessel plane
     def getPlane(self):
         return (np.bitwise_and(self.getBlock(), np.power(2, self.__B)) >> self.__B)
 
+    ## Returns a string of the current coordinate, debug purpose
     def getCoord(self):
         return "("+str(self.__x)+", "+str(self.__y)+", "+str(self.__z)+", "+str(self.__B)+")"
 
@@ -80,6 +87,8 @@ class VesselIterator:
                           self.getBlock(),
                           255-np.power(2, self.__B))) + (plane << self.__B)
 
+## TargetIterator is a class to iterate through the target image
+## It contains methods like: nextPlane()
 class TargetIterator:
     def __init__(self, targetImage):
         self.__target = targetImage
@@ -106,6 +115,8 @@ class TargetIterator:
 
         return plane
 
+## ConjugationMap is the class that marks if determinated plane is conjugated or not
+## It contains methods like: set(bit) and next()
 class ConjugationMap:
     def __init__(self, targetImage):
         self.maxPlanes = int(np.ceil(targetImage.shape[0]*
