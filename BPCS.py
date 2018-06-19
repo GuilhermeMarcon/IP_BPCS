@@ -423,7 +423,7 @@ def compareRMSE(H, HL):
     
 ## Main
 print("BPCS Steganography\nInsert operation:\nHide -> 1\n"+
-      "Unhide -> 2\nCompare RMSE -> 3")
+      "Unhide -> 2\nCompare RMSE -> 3\nDEMO -> 4\n")
 operation = int(input())
 
 if operation == 1:
@@ -487,3 +487,24 @@ elif operation == 3:
     print("RMSE: ", compareRMSE(imageio.imread(first_name).astype(np.uint8),
                                 imageio.imread(second_name).astype(np.uint8)))
 
+elif operation == 4:
+    print("Executing DEMO")
+    print("Hiding image")
+    print("Vessel image: images/1-mountain.png")
+    print("Target image: images/1-colorful-smoke.png")
+    V = imageio.imread("images/1-mountain.png").astype(np.uint8)
+    T = imageio.imread("images/1-colorful-smoke.png").astype(np.uint8)
+
+    H = BPCS_hide(V, T)
+    
+    print("Saving vessel with hidden image: result_hidden/DEMO.png")
+    imageio.imwrite("result_hidden/DEMO.png", H)
+
+    print()
+    print("Unhiding image")
+    U = BPCS_unhide(H)
+
+    print("Saving unhidden image")
+    imageio.imwrite("result_unhidden/DEMO.png", U)
+
+    print("\nDEMO finished")
