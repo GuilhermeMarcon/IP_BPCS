@@ -1,4 +1,0 @@
-1
-imagens/reduced-colorful-smoke.png
-imagens/reduced-lion.png
-results/test2.png

@@ -1,4 +1,0 @@
-1
-imagens/reduced-lion.png
-imagens/halfed-reduced-lion.png
-results/test5.png

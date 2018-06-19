@@ -1,4 +1,0 @@
-1
-imagens/original-mountain.png
-imagens/original-lion.png
-results/test3.png
