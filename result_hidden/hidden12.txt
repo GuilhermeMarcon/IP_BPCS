@@ -1,0 +1,7 @@
+Vessel: images/100-colorful-smoke.png
+	Size: 4207048 bytes
+Target: images/12-colorful-smoke.png
+	Size: 647753 bytes
+Percentage:	12.00455
+Time:		48.46190 seconds
+RMSE:		1.85113

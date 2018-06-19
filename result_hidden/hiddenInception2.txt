@@ -1,0 +1,7 @@
+Vessel: images/100-mountain.png
+	Size: 21422985 bytes
+Target: result_hidden/hiddenInception1.png
+	Size: 5899266 bytes
+Percentage:	14.34095
+Time:		252.69626 seconds
+RMSE:		1.86289

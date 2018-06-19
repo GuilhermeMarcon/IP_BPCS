@@ -1,0 +1,6 @@
+Vessel: images/25-colorful-smoke.png
+	Size: 1380575 bytes
+Target: images/12-colorful-smoke.png
+	Size: 647753 bytes
+Percentage:	48.01821
+Insufficient complex blocks to image be inserted.
